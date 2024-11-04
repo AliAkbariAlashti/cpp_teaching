@@ -48,3 +48,27 @@ int main() {
 
     return 0;
 }
+
+
+
+
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int number, reverseNumber = 0;
+    
+    cout << "Enter a number: ";
+    cin >> number;
+    
+    while (number != 0) {
+        int lastDigit = number % 10;           
+        reverseNumber = reverseNumber * 10 + lastDigit;  
+        number /= 10;                              
+    }
+    
+    cout << "Reversed number: " << reverseNumber << endl;
+    
+    return 0;
+}
